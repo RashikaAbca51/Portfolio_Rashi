@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rashika A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="stylesheet.js">
+<style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .btn {
+  background-color: Black;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Grey;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; background-color: #605757;}
+.item4 { grid-area: right;background-color: #040404 }
+.item5 { grid-area: footer; }
+.item6 { grid-area: footer2; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main main main main  main'
+    'menu footer footer footer footer footer'
+    'footer2 footer2 footer2 footer2 footer2 footer2';
+ 
+  background-color:  rgba(3, 1, 1, 0.9);
+ 
+}
+.column {
+          float: left;
+          width: 33.33%;
+          padding-top: 5%;
+          padding-left: 10%;
+          color: white;
+          font-size: 200%;
+          font-family:montserrat,montserrat,sans-serif;
+        } 
+
+
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
+          color: white;
+  
+        }
+
+        @media screen and (max-width:600px) {
+        .column {
+          width: 100%;
+        }
+
+}
+
+.column{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:black;
+    flex-direction: row;
+    width: 90%;
+}
+
+.progress-bar {
+      width: 760px;
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 4px;
+      overflow: hidden;
+      padding-right: 15px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: rgb(70, 31, 75);
+      transition: width 0.2s ease-in-out;
+    }
+
+.intro{
+    font-family: "Lato", sans-serif;
+}
+.grid-container > div {
+  background-color:rgb(255, 255, 255);
+  text-align: center;
+}
+  
+  .img {
+  height: 550PX;
+  width: 400PX;
+  border-radius: 5%;
+  display: flex;
+  justify-content: flex-start;
+}
+.sidepanel  {
+  width: 0;
+  position: absolute;
+   z-index: 1;
+  height: 250px;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5px;
+}
+
+.sidepanel a {
+  padding: 15px 8px 8px 8px;
+  text-decoration: none;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 45px;
+}
+
+.openbtn {
+display:flex;
+justify-content:flex-end ;
+
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+div.gallery {
+    gap: 10px;
+  margin: 5px;
+  border: 1px solid #605757;
+  float: left;
+  width: 250px;
+  font-size: 20px;
+  }
+
+div.gallery:hover {
+  border: 2px solid #070707;
+}
+
+div.gallery img {
+  width: 230px;
+  height: 200px;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+.wrapper:hover img{
+      transform: scale(1.2);
+    }
+
+</style>
+
+<body>
+
+<div class="grid-container">
+    <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+        }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="item1"><div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#edu">Qualification</a>
+    <a href="#scroll">Skill</a>
+    <a href="#Contact">Contact</a>
+  </div>
+<button class="openbtn" onclick="openNav()">☰ Menu</button>  
+  <div class="intro">
+    <p><h1><br><br> Rashika A<br></h1><br>
+            <h5>Computer Application UnderGrad<br></h5>
+            I'm an final year UnderGrad majoring in Computer Application.
+            Based in Bangalore,<br> I'm currently a part of Kristu Jayanti College.
+            As for my areas of interest, <br>the spectrum is quite high
+            I'm writting poems, cooking various crusines,<br> exploring cultures,
+            and yeah definately looking to collaborate my creavtive side <br>
+            with Information Technology.<br><br><br>
+           <button class="btn"><i class="fa fa-download"></i> Download CV</button><br><br><br>
+           Potential Designation: Any IT related job; preferably AI & Development
+            <h3><br><br><u>Educational Qualification</u></h3>
+          </p></div>
+  </div>
+  <div class="item2"><img src="img1/prfinal.jpg"class="img"  alt="Pic"   ></div>
+  <div class="item3" id="edu"><div class="gallery">
+    <a target="_blank" href="https://kristujayanti.edu.in/home/">
+      <img src="img1/kjc.jpg" alt="Cinque Terre" width="170" height="170">
+    </a>
+    <div class="desc">(BCA)Kristu Jayanthi<br>
+        Autonomous College in 2nd year.</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="https://www.mountcarmelpucollege.org/">
+      <img src="img1/mcc.jpg" alt="Forest" width="170" height="170">
+    </a>
+    <div class="desc">Mount Carmel PU
+        College (PCMB) <br>with 88.87%</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="http://stcharlesicselrp.com/">
+      <img src="img1/schs.jpg" alt="Northern Lights" width="150" height="180">
+    </a>
+    <div class="desc">St. Charles High School
+        (ICSE),<br> 2019 with 87.83%</div>
+  
+</div><br><br>
+</div>
+<div class="item5"><br><br><p><h3><U>Skills</U></h3><div id="scroll" class="column">
+        <div>VB.Net Framework</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 75%;"></div>
+    </div>
+
+    <div >Basics of Git and GIthub</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 30%;"></div>
+    </div>
+
+    <div>HTML</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 20%;"></div>
+    </div>
+    <div>C Programming</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 30%;"></div>
+    </div>
+
+    <div>CSS</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 20%;"></div><br><br>
+    </div></p>
+</div>
+  <div class="item6" id="Contact"><br><br<br><h3><u>CONTACT INFO</u></h3><BR>&nbsp;
+    <center><div class="wrapper" id="ping">
+        <a href="https://instagram.com/rashika__.xylys?igshid=MzNlNGNkZWQ4Mg=="><img class="img1" style="float: left;" src="img1/insta.jpg" width="53" height="53"></div></a>
+                    
+        <div class="wrapper">
+        <a href="https://mail.google.com/mail/u/0/#search/19p0260mcpuc%40gmail.com"><img class="img1" style="float: left;" src="img1/mail.png" width="53" height="53"></div></a>
+                         
+        <div class="wrapper">
+        <a href="https://www.linkedin.com/in/rashika-a-44ba55238"><img class="img1" style="float: left;" src="img1/linkedin.png" width="53" height="53"></div></a>
+                        
+        <div class="wrapper">
+        <a href="https://github.com/RashikaAbca51"><img class="img1" style="float: left;" src="img1/GitHub.png" width="53" height="53"></div></a></div></centre>
+
+</body>
+</html>
+
+
